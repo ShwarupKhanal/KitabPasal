@@ -1,0 +1,52 @@
+{% include 'components/navbar.html' %}
+
+<div class="bg-blue-50 min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-3xl bg-white shadow-lg rounded-lg p-8">
+        <h1 class="text-3xl font-bold mb-6 text-blue-900">Add New Book</h1>
+        <form action="/addproduct" method="POST" enctype="multipart/form-data">
+            <div class="mb-6">
+                <label for="product-image" class="block text-sm font-medium text-gray-700">Image URL</label>
+                <input type="text" id="product-image" name="product-image" 
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm p-3" />
+            </div>
+            <div class="mb-6">
+                <label for="product-name" class="block text-sm font-medium text-gray-700">Book Name</label>
+                <input type="text" id="product-name" name="product-name" required 
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm p-3" />
+            </div>
+
+            <div class="mb-6">
+                <label for="product-description" class="block text-sm font-medium text-gray-700">Description</label>
+                <textarea id="product-description" name="product-description" rows="4" required
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm p-3"></textarea>
+            </div>
+
+            <div class="mb-6">
+                <label for="product-price" class="block text-sm font-medium text-gray-700">Price</label>
+                <input type="number" id="product-price" name="product-price" required 
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm p-3" />
+            </div>
+
+            <div class="mb-6">
+                <label for="product-category" class="block text-sm font-medium text-gray-700">Category</label>
+                <input type="text" id="product-category" name="product-category" required 
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm p-3" />
+            </div>
+
+            <div class="mb-6">
+                <label for="product-pdf" class="block text-sm font-medium text-gray-700">PDF Upload</label>
+                <input type="file" id="product-pdf" name="product-pdf" accept=".pdf"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm p-3" />
+            </div>
+
+            <div class="flex items-center justify-end">
+                <button type="submit" 
+                    class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-150">
+                    Add Product
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% include 'components/footer.html' %}

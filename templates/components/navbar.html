@@ -1,0 +1,51 @@
+{% include 'components/tailwind.html' %}
+<nav class="flex dark:bg-blue-800 items-center relative justify-between bg-white px-6 py-4 w-full shadow-md">
+    <div class="flex items-center">
+        <a href="/">
+        <h1 class="text-2xl font-bold text-blue-800 dark:text-blue-200">Kitab Pasal</h1></a>
+    </div>
+    <ul id="drawer" role="menu" class="sm:gap-12 p-2 rounded-lg transition-transform duration-300 ease-in-out transform sm:flex flex-col sm:flex-row absolute top-16 right-0 w-full bg-white sm:bg-transparent sm:static sm:w-auto sm:min-h-0 dark:bg-blue-900 sm:text-right">
+        <div class="sm:hidden p-6 mb-4 flex items-center justify-center">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Menu Icon SVG Path -->
+                <path d="M10 14C10 14.5523 10.4477 15 11 15H29C29.5523 15 30 14.5523 30 14C30 13.4477 29.5523 13 29 13H11C10.4477 13 10 13.4477 10 14Z" fill="#1A1E2C"/>
+                <path d="M10 20C10 20.5523 10.4477 21 11 21H29C29.5523 21 30 20.5523 30 20C30 19.4477 29.5523 19 29 19H11C10.4477 19 10 19.4477 10 20Z" fill="#1A1E2C"/>
+                <path d="M10 26C10 26.5523 10.4477 27 11 27H29C29.5523 27 30 26.5523 30 26C30 25.4477 29.5523 25 29 25H11C10.4477 25 10 25.4477 10 26Z" fill="#1A1E2C"/>
+            </svg>
+        </div>
+        <li class="font-medium text-lg p-4 sm:p-0 sm:hover:bg-transparent text-blue-700 dark:text-blue-200 hover:text-primary transition-colors">
+            <a href="/products" class="hover:underline">Books</a>
+        </li>
+        <li class="font-medium text-lg p-4 sm:p-0 sm:hover:bg-transparent text-blue-700 dark:text-blue-200 hover:text-primary transition-colors">
+            <a href="/contacts" class="hover:underline">Contact</a>
+        </li>
+        <li class="font-medium text-lg p-4 sm:p-0 sm:hover:bg-transparent text-blue-700 dark:text-blue-200 transition-colors">
+            <form action="/search" method="get" class="flex items-center">
+                <input type="text" name="query" placeholder="Search..." class="p-2 rounded border border-blue-300 dark:border-blue-600 dark:bg-blue-800 dark:text-white focus:outline-none">
+                <button type="submit" class="ml-2 p-2 bg-primary text-white rounded hover:bg-primary-dark transition-colors">Search</button>
+            </form>
+        </li>
+        
+    
+    <div class="flex gap-4 items-center">
+        {% if session.user %}
+        <div class="flex justify-between ">
+            {% if session.email == 'admin@kitabpasal.com' %}
+            <a href="/addproduct" class="block text-white py-2 px-4  font-medium">
+                Add Books
+            </a>
+            {% endif %}
+            <form class="block" action="/logout" method="post">
+                <button type="submit" class="text-white bg-red-600 py-2 px-4 rounded-lg font-medium shadow-md transition-all hover:bg-red-700 focus:outline-none">
+                    Logout
+                </button>
+            </form>
+        </div>
+            
+        {% else %}
+            <a href="/login" class="text-white bg-blue-600 py-2 px-4 rounded-lg font-medium shadow-md transition-all hover:bg-blue-700 focus:outline-none">
+                Login
+            </a>
+        {% endif %}
+    </div>
+</nav>

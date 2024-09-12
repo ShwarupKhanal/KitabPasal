@@ -1,0 +1,48 @@
+{% include 'components/navbar.html' %}
+
+<div class="flex items-center min-h-screen bg-blue-100">
+    <div class="container mx-auto flex flex-col md:flex-row">
+        <!-- Image Section -->
+        <div class="md:w-1/2 flex items-center justify-center">
+            <img src="https://th.bing.com/th/id/R.eb3c9ddf93086ac141c9b03246f40479?rik=OmZZnRcYwSyMvg&pid=ImgRaw&r=0" alt="Sign Up" class="w-full h-full object-cover rounded-lg shadow-lg">
+        </div>
+
+        <!-- Form Section -->
+        <div class="md:w-1/2 flex items-center justify-center">
+            <div class="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
+                <div class="text-center mb-6">
+                    <h1 class="text-3xl font-semibold text-black">Sign Up</h1>
+                    <p class="text-blue-500">Create your account</p>
+                </div>
+                <form action="/signup" method="post">
+                    <div class="mb-6">
+                        <label for="fullname" class="block mb-2 text-sm text-black">Full Name</label>
+                        <input type="text" name="fullname" id="fullname" placeholder="Full Name" class="w-full px-3 py-2 placeholder-blue-400 border border-blue-300 rounded-md" required />
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-sm text-black">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="you@company.com" class="w-full px-3 py-2 placeholder-blue-400 border border-blue-300 rounded-md" required />
+                    </div>
+                    <div class="mb-6">
+                        <label for="password" class="block mb-2 text-sm text-black">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Your Password" class="w-full px-3 py-2 placeholder-blue-400 border border-blue-300 rounded-md" required />
+                    </div>
+                    <div class="mb-6">
+                        <label for="cpassword" class="block mb-2 text-sm text-black">Confirm Password</label>
+                        <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" class="w-full px-3 py-2 placeholder-blue-400 border border-blue-300 rounded-md" required />
+                    </div>
+                    <div class="mb-6">
+                        <button type="submit" class="w-full px-3 py-4 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none">Create Account</button>
+                    </div>
+                    <div class="text-sm text-center text-blue-700 mt-4">
+                        By signing up, you agree to the 
+                        <a class="text-blue-600 hover:underline" href="#">Terms of Service</a> and 
+                        <a class="text-blue-600 hover:underline" href="#">Privacy Policy</a>.
+                    </div>
+                </form>
+                <p class="text-sm text-center text-blue-700 mt-4">Already have an account? <a href="/login" class="text-blue-600 hover:underline">Sign In</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'components/footer.html' %}

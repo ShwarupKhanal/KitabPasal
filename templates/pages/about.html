@@ -1,0 +1,45 @@
+{% include 'components/navbar.html' %}
+
+<div class="bg-blue-100 min-h-screen py-8">
+    <div class="container mx-auto px-6">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden md:flex">
+            <!-- Image Section -->
+            <div class="md:w-1/2">
+                <img src="https://example.com/book-cover.jpg" alt="Book Cover" class="w-full h-full object-cover">
+            </div>
+            
+            <!-- Details Section -->
+            <div class="md:w-1/2 p-6">
+                <h1 class="text-4xl font-bold text-blue-800 mb-4">The Great Book</h1>
+                <p class="text-xl text-blue-600 mb-4">by Author Name</p>
+                
+                <p class="text-lg text-blue-800 mb-6">
+                    Dive into the world of "The Great Book," a compelling narrative that takes you on an unforgettable journey through captivating stories and intriguing characters. This book promises to engage, entertain, and inspire readers of all ages.
+                </p>
+                
+                <div class="flex items-center mb-6">
+                    <span class="text-2xl font-bold text-blue-800 mr-4">Rs 499</span>
+                    <span class="text-blue-600 line-through">Rs 599</span>
+                </div>
+                
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold text-blue-800 mb-2">Description</h2>
+                    <p class="text-blue-700">
+                        "The Great Book" explores themes of adventure, friendship, and self-discovery. With its richly detailed world and multi-dimensional characters, it is a must-read for anyone who loves a well-crafted story. Whether you're curled up at home or on the go, this book is sure to capture your imagination.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Add to Cart
+                    </button>
+                    <button class="bg-blue-300 text-blue-800 px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'components/footer.html' %}

@@ -1,0 +1,39 @@
+{% include 'components/navbar.html' %}
+
+<div class="bg-gray-100 min-h-screen flex items-center justify-center py-8">
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto w-full">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Review Your Cart</h1>
+        
+        <!-- Display Cart Items -->
+        <ul class="mb-8">
+            {% if cart_items %}
+                {% for item in cart_items %}
+                <li class="border-b border-gray-300 py-4 flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="{{ item['product_image'] }}" alt="{{ item['product_name'] }}" class="w-24 h-24 mr-6 object-cover rounded">
+                        <span class="text-lg font-semibold">{{ item['product_name'] }}</span>
+                    </div>
+                    <div class="text-lg font-semibold">Rs {{ item['product_price'] }}</div>
+                </li>
+                {% endfor %}
+            {% else %}
+                <li class="text-center text-gray-600 py-4">Your cart is empty.</li>
+            {% endif %}
+        </ul>
+        
+        <!-- Total Price Calculation -->
+        <div class="flex justify-between text-xl font-semibold mb-8">
+            <span>Total Price:</span>
+            <span>Rs {{ total_price }}</span>
+        </div>
+        
+        <!-- Checkout Form -->
+        <form action="/checkout" method="POST">
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Complete Purchase
+            </button>
+        </form>
+    </div>
+</div>
+
+{% include 'components/footer.html' %}

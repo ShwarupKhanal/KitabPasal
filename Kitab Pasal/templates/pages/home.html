@@ -1,0 +1,104 @@
+{% include 'components/navbar.html' %}
+
+<!-- Big Header with Background Image -->
+<header class="relative w-full h-96 bg-cover bg-center" style="background-image: url('https://media.istockphoto.com/id/1480851057/photo/library-shelf-full-of-books-on-different-subjects-education-theme-background.webp?b=1&s=170667a&w=0&k=20&c=TccjxX_F3CSU1E7Yjtd48qJJBhyMahpneYcwfJ9MEqU=');">
+    <div class="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50">
+        <h1 class="text-white text-5xl font-bold text-center px-6 mb-4">Welcome to Kitab Pasal</h1>
+        <p class="text-white text-lg text-center px-6 max-w-2xl">
+            Discover a wide range of books at Kitab Pasal, featuring high-quality selections to cater to all your reading needs. Shop now and immerse yourself in the best literary offerings available!
+        </p>
+    </div>
+</header>
+
+<!-- Card and Description Section -->
+<section class="py-12 mx-14 bg-gray-100">
+    <div class="container mx-auto flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 px-6">
+        <!-- Description -->
+        <div class="max-w-lg p-10 mx-auto md:mx-0">
+            <h2 class="text-3xl font-semibold text-gray-800">Why Choose Us?</h2>
+            <p class="mt-4 text-gray-600">
+                At Kitab Pasal, we are dedicated to offering you the finest selection of books. Our carefully curated collection ensures that you find the best reads to meet your needs. With something for everyone, we strive to provide an outstanding experience for all book lovers.
+            </p>
+            <a href="/products" class="mt-6 inline-block px-4 py-2 text-white bg-slate-600 rounded-md hover:bg-slate-700">
+                Explore Our Collection
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="py-12 mx-14 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Our Featured Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Example Product Card -->
+            <div class="border p-4 rounded shadow hover:shadow-lg transition-shadow">
+                <img src="https://via.placeholder.com/150" alt="Product Name" class="w-full h-48 object-cover mb-4">
+                <h3 class="text-xl font-semibold">Product Name</h3>
+                <p class="text-gray-700 mt-2">Brief description of the product.</p>
+                <p class="text-lg font-bold mt-4">$29.99</p>
+                <a href="/products/1" class="mt-4 inline-block bg-primary text-white py-2 px-4 rounded hover:bg-primary-dark transition-colors">View Details</a>
+            </div>
+            <!-- Repeat Product Card for other products -->
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-12 mx-14 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Testimonial 1 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+                <p class="text-gray-600 italic">"Kitab Pasal offers an amazing selection of books! The service is excellent and I always find what I need."</p>
+                <div class="mt-4 flex items-center">
+                    <img src="https://scontent.fktm7-1.fna.fbcdn.net/v/t1.6435-9/72359946_1308346996005662_2774225788596125696_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeGo35H9EnoXlulxJ7DqaubWNLC9rxBuTqM0sL2vEG5OozD__BqVM-FfwXrd_yDJybfngWgiffeLHlHs1OFTr88s&_nc_ohc=x51wsnMx_qMQ7kNvgGMavjY&_nc_ht=scontent.fktm7-1.fna&_nc_gid=A3ipJlNmWtUEXcrrFTNY19U&oh=00_AYB7aAWVCF7k3Rm7EjVrem3pEERDMygF--IQKq6QmJjyUQ&oe=67092757" alt="Amit Maharjan" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <p class="text-gray-800 font-semibold">Amit Maharjan</p>
+                        <p class="text-gray-600">Book Lover</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+                <p class="text-gray-600 italic">"I love the variety of books available at Kitab Pasal. The delivery is fast, and the customer service is top-notch!"</p>
+                <div class="mt-4 flex items-center">
+                    <img src="https://scontent.fktm7-1.fna.fbcdn.net/v/t39.30808-6/448881929_2208395472827804_7974294876521254645_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeH9sRuTJGOaYGDIyTSfi0VQc4i4KOLMfwtziLgo4sx_C5gvAtIluTAplGBNizXHs84J1Z9JE7VVX8s1VVB7JUpX&_nc_ohc=uOqPpoDA_qUQ7kNvgHYJncz&_nc_ht=scontent.fktm7-1.fna&oh=00_AYD8vz95_ehk1IGUZBlIxKzqAwpCfxHvnjrYrV7Cz1ORhQ&oe=66E784D5" alt="Deepankar" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <p class="text-gray-800 font-semibold">Deepankar Shakya</p>
+                        <p class="text-gray-600">Manga Reader</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="p-6 bg-white rounded-lg shadow-lg">
+                <p class="text-gray-600 italic">"Kitab Pasal has become my go-to for all my reading needs. Highly recommended for all book and distrubuted system lovers."</p>
+                <div class="mt-4 flex items-center">
+                    <img src="https://scontent.fktm20-1.fna.fbcdn.net/v/t39.30808-1/399630729_3633574323597358_3280610009908278772_n.jpg?stp=c0.365.1533.1533a_dst-jpg_s100x100&_nc_cat=100&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=w576Zo_TVC4Q7kNvgFQyPV1&_nc_ht=scontent.fktm20-1.fna&oh=00_AYC6wffDeLYTBQF55bhjBLB9wXC43cqHDRtv3qUODzei3w&oe=66CE2606" alt="Bibat Thokar" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <p class="text-gray-800 font-semibold">Bibat Thokar</p>
+                        <p class="text-gray-600">Distrubuted System - Author</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Map Section -->
+<section class="py-12 mx-14 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Visit Us</h2>
+        <div class="w-full h-64">
+            <!-- Embedded Google Map -->
+            <iframe class="w-full h-full rounded-lg shadow-lg"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14132.727589921571!2d85.3256648!3d27.6807724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19c795792897%3A0xd2064f344bb0abd!2sLalitpur%20Engineering%20College!5e0!3m2!1sen!2snp!4v1724398221965!5m2!1sen!2snp"
+                allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+</section>
+
+{% include 'components/footer.html' %}

@@ -1,0 +1,29 @@
+<!-- views/index.ejs -->
+{% include 'components/navbar.html' %}
+
+<div class="container mx-auto py-8">
+  <h1 class="text-4xl font-bold text-center mb-8">Our Books</h1>
+
+  <p class="text-center text-lg text-blue-700 mb-8">
+    Explore our diverse range of Books. Each product is carefully curated to meet your needs and preferences. Click on a book card to learn more and add your favorites to the cart.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for row in rows %} 
+    <a href="/products/{{ row[0] }}" class="bg-white shadow-md rounded-lg overflow-hidden transform transition-transform hover:scale-105 w-full max-w-sm">
+      <img src="{{ row[4] }}" alt="{{ row[1] }}" class="w-full h-48 object-contain rounded-t-lg">
+      <div class="p-4">
+        <h2 class="text-xl font-semibold">{{ row[1] }}</h2>
+        
+        <p class="text-blue-600">Category: {{ row[5] }}</p>
+        <p class="text-blue-600">Rs {{ row[3] }}</p>
+        <p class="text-blue-500 mt-2">{{ (row[2])[:60] }}........</p> <!-- Static description added here -->
+        <button class="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          Add to Cart
+        </button>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% include 'components/footer.html' %}
