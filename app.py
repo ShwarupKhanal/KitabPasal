@@ -312,7 +312,7 @@ def add_to_library():
     finally:
         cur.close()
 
-
+#checkout
 @app.route('/checkout', methods=['GET', 'POST'])
 def checkout():
     if 'user' not in session:
@@ -360,12 +360,12 @@ def checkout():
                 "purchase_order_name": "Book Purchase",
                 "customer_info": {
                     "name": user_name,
-                    "email": user_email,
-                    "phone": "9800000000"
+                    "email": user_email
+                   
                 }
             }
             headers = {
-                'Authorization': 'key 0da482c13aef465f9d04dda5d782b855',
+                'Authorization': 'key 05bf95cc57244045b8df5fad06748dab',
                 'Content-Type': 'application/json',
             }
 

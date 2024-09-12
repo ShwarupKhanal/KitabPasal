@@ -13,6 +13,7 @@
                 <path d="M10 26C10 26.5523 10.4477 27 11 27H29C29.5523 27 30 26.5523 30 26C30 25.4477 29.5523 25 29 25H11C10.4477 25 10 25.4477 10 26Z" fill="#1A1E2C"/>
             </svg>
         </div>
+       
         <li class="font-medium text-lg p-4 sm:p-0 sm:hover:bg-transparent text-blue-700 dark:text-blue-200 hover:text-primary transition-colors">
             <a href="/products" class="hover:underline">Books</a>
         </li>
@@ -30,6 +31,12 @@
     <div class="flex gap-4 items-center">
         {% if session.user %}
         <div class="flex justify-between ">
+            <a href="/cart" class="block text-white py-2 px-4  font-medium">
+                Cart
+            </a>
+            <a href="/library" class="block text-white py-2 px-4  font-medium">
+                Library
+            </a>
             {% if session.email == 'admin@kitabpasal.com' %}
             <a href="/addproduct" class="block text-white py-2 px-4  font-medium">
                 Add Books
